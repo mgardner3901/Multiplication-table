@@ -22,8 +22,16 @@ Height of multiplication table: 8
   8  16  24  32  40  48  56  64  72  80
 """
 
-n=int(input('Please enter a positive integer between 1 and 15: '))
-for row in range(1,n+1):
-    for col in range(1,n+1):
-        print(row*col, end="\t")
-    print()
+
+Width=int(input("Width of multiplication table: "))
+Height=int(input("Height of multiplication table: "))
+a=Width
+b=Height
+x=list(range(1,a+1))
+y=list(range(1,b+1))
+
+
+for row in y:
+    for num in [row*col for col in x]:
+        print("{0:>3}".format(num), end="")
+    print(" ")
